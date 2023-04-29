@@ -42,5 +42,23 @@
             }
 
         }
+
+        .person {
+            position: absolute;
+            bottom: -2rem;
+            margin: auto;
+            background-image: url('../../../public/splash.png');
+            background-repeat: no-repeat;
+            background-size: 23rem;
+            left: 33%;
+        }
+
+        .email {
+            position: absolute;
+            top: 50%;
+            color: orange;
+            left: 0;
+            // text-decoration: none;
+        }
     }
 }
