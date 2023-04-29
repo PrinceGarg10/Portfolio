@@ -1,4 +1,4 @@
-@import '../../styles/contants.scss';
+@import '../../styles/costants.scss';
 
 .wrapper {
     position: relative;
@@ -78,6 +78,16 @@
     
         }
        
+    }
+
+    .menuIcon {
+
+        @media (max-width: $sm),
+        (max-width: $md) {
+            display: block;
+        }
+
+        display: none;
     }
     
 }

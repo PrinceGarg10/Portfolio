@@ -1,0 +1,46 @@
+@import '../../styles/costants.scss';
+
+.wrapper {
+    overflow: hidden;
+
+
+    .container {
+        position: relative;
+        z-index: 1;
+
+        .upperElements {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .lowerElements {
+            margin-top: 12rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .experience {
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                >:nth-child(2) {
+                    line-height: 25px;
+                }
+            }
+
+            .certificate {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                img {
+                    width: 3.5rem;
+                    margin-bottom: 1rem;
+                }
+            }
+
+        }
+    }
+}
