@@ -9,7 +9,7 @@ const Hero = () => {
             <motion.div
                 variants={staggerContainer}
                 initial='hidden'
-                whileInView={'show'}
+                whileInView='show'
                 viewport={{ once: false, amount: 0.25 }}
                 className={`innerWidth ${css.container}`}>
                 {/* ----------UPPER ELEMENTS----------- */}
