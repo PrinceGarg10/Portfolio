@@ -1,15 +1,24 @@
 import React from "react";
 import css from './Expertise.module.scss'
 import { WhatDoIHelp, projectExperience } from '../../utils/data'
+import { motion } from "framer-motion";
+import { fadeIn, staggerContainer, textVariant } from "../../utils/motion";
 const Expertise = () => {
     return (
-        <section className={css.wrapper}>
+        <motion.section
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: false, amount: 0.25 }}
+            className={css.wrapper}>
             <div className={`paddings yPaddings flexCenter innerWidth ${css.container}`}>
                 <div className={css.leftSide}>
                     {
                         projectExperience.map((exp, i) => {
                             return (
-                                <div key={i} className={css.exp}>
+                                <motion.div
+                                    variants={fadeIn("right", "tween", (i + 1) * 0.2, 1)}
+                                    key={i} className={css.exp}>
                                     <div className="flexCenter" style={{ background: exp.bg }}>
                                         <exp.icon size={25} color="white" />
                                     </div>
@@ -20,12 +29,14 @@ const Expertise = () => {
                                             {exp.projects} Projects
                                         </span>
                                     </div>
-                                </div>
+                                </motion.div>
                             )
                         })
                     }
                 </div>
-                <div className={css.rightSide}>
+                <motion.div 
+                variants={textVariant(0.5)}
+                className={css.rightSide}>
                     <span className="primaryText">
                         What do I help?
                     </span>
@@ -49,9 +60,9 @@ const Expertise = () => {
                             <span className="secondaryText">Happy Clients</span>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
