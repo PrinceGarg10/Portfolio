@@ -1,6 +1,6 @@
 import React from "react";
 import css from './Expertise.module.scss'
-import { projectExperience } from '../../utils/data'
+import { WhatDoIHelp, projectExperience } from '../../utils/data'
 const Expertise = () => {
     return (
         <section className={css.wrapper}>
@@ -29,6 +29,26 @@ const Expertise = () => {
                     <span className="primaryText">
                         What do I help?
                     </span>
+                    {
+                        WhatDoIHelp.map((p, i) => {
+                            return (
+                                <span key={i} className="secondaryText">
+                                    {p}
+                                </span>
+                            )
+                        })
+                    }
+                    <div className={`flexCenter ${css.stats}`}>
+                        <div className={`flexCenter ${css.stat}`}>
+                            <span className="primaryText">285+</span>
+                            <span className="secondaryText">Projects Completed</span>
+
+                        </div>
+                        <div className={`flexCenter ${css.stat}`}>
+                            <span className="primaryText">190+</span>
+                            <span className="secondaryText">Happy Clients</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
