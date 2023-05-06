@@ -1,4 +1,5 @@
 import Expertise from "./components/Expertise/Expertise";
+import Footer from "./components/Footer/Fotter";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import People from "./components/People/People";
@@ -14,6 +15,7 @@ const App = () => {
     <Works />
     <Portfolio />
     <People />
+    <Footer />
   </div>;
 };
 
