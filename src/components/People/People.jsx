@@ -15,6 +15,7 @@ const People = () => {
             <motion.div 
             variants={footerVariants}
             className={`yPaddings innerWidth ${css.container}`}>
+                <a className="anchor" id="people"></a>
                 <div className={`flexCenter ${css.heading}`}>
                     <span className="primaryText">
                         People Talk about us
